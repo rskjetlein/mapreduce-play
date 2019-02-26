@@ -8,7 +8,7 @@ import (
 
 func main() {
 	flow.New().TextFile(
-		"/etc/passwd", 3,
+		"english-words/words.txt", 5,
 	).Filter(func(line string) bool {
 		return !strings.HasPrefix(line, "#")
 	}).Map(func(line string, ch chan string) {
